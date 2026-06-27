@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | HoopZone</title>
+  <meta name="description" content="Create a new HoopZone account to access your wishlist, track orders, and checkout faster.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🔥 Season Kickoff Sale: Use Code <span style="text-decoration: underline; font-weight: 800;">HOOP20</span> for 20% off all gear! 🔥
+  </div>
+
+  <!-- Header Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="nav-icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="shop.html" class="nav-icon-btn" aria-label="Search Shop">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="shop.html?wishlist=true" class="nav-icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge wishlist-badge">0</span>
+        </a>
+        <a href="cart.html" class="nav-icon-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-badge">0</span>
+        </a>
+        <div class="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="background-color: var(--bg-secondary); padding: 50px 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center;">
+      <h1 class="bold-heading" style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 8px;">Create Account</h1>
+      <p style="color: var(--text-secondary);">Join HoopZone for faster checkout and exclusive deals.</p>
+    </div>
+  </section>
+
+  <!-- Register Form Section -->
+  <section class="section">
+    <div class="container" style="display: flex; justify-content: center;">
+      <div class="contact-form-panel scroll-reveal active" style="max-width: 500px; width: 100%;">
+        <h3 style="margin-bottom: 24px;">Sign Up</h3>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="register-name">Full Name <span class="text-primary-color">*</span></label>
+            <input type="text" id="register-name" class="form-control" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email Address <span class="text-primary-color">*</span></label>
+            <input type="email" id="register-email" class="form-control" placeholder="john.doe@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password <span class="text-primary-color">*</span></label>
+            <input type="password" id="register-password" class="form-control" placeholder="••••••••" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label for="register-confirm">Confirm Password <span class="text-primary-color">*</span></label>
+            <input type="password" id="register-confirm" class="form-control" placeholder="••••••••" required minlength="6">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+            Create Account <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+          </button>
+        </form>
+        <p style="margin-top: 20px; text-align: center; color: var(--text-secondary);">
+          Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 600;">Sign in here</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px; padding: 60px 0 20px; background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="margin-bottom: 20px; font-family: var(--font-headings); font-weight: 800; font-size: 1.5rem; color: var(--text-primary);">
+          <i class="fa-solid fa-basketball" style="color: var(--primary);"></i> Hoop<span style="color: var(--primary);">Zone</span>
+        </h4>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">The ultimate destination for premium basketball gear. Elevate your game with equipment trusted by the pros.</p>
+      </div>
+      <div class="footer-col">
+        <h5 style="margin-bottom: 20px;">Quick Links</h5>
+        <ul style="color: var(--text-secondary); line-height: 2;">
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-secondary);">
+      <p>&copy; 2026 HoopZone Sports Group. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const registerForm = document.getElementById('register-form');
+      if (registerForm) {
+        registerForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const name = document.getElementById('register-name').value;
+          const email = document.getElementById('register-email').value;
+          const password = document.getElementById('register-password').value;
+          const confirm = document.getElementById('register-confirm').value;
+          
+          if (password !== confirm) {
+            showToast('Passwords do not match.', 'error');
+            return;
+          }
+          
+          const submitBtn = registerForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = 'Creating...';
+          submitBtn.disabled = true;
+          
+          const result = await register(name, email, password);
+          
+          if (result.success) {
+            showToast('Account created successfully!', 'success');
+            setTimeout(() => {
+              window.location.href = 'index.html';
+            }, 1000);
+          } else {
+            showToast(result.error || 'Registration failed.', 'error');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

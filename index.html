@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HoopZone | Premium Basketball Gear & Equipment</title>
+  <meta name="description" content="Elevate your game with HoopZone's premium basketball equipment, footwear, training gear, and court accessories. Top quality for elite athletes.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🔥 Season Kickoff Sale: Use Code <span style="text-decoration: underline; font-weight: 800;">HOOP20</span> for 20% off all gear! 🔥
+  </div>
+
+  <!-- Header Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="nav-icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="shop.html" class="nav-icon-btn" aria-label="Search Shop">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="shop.html?wishlist=true" class="nav-icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge wishlist-badge">0</span>
+        </a>
+        <a href="cart.html" class="nav-icon-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-badge">0</span>
+        </a>
+        <div class="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content scroll-reveal active">
+        <span class="hero-subtitle">Pro Basketball Culture</span>
+        <h1 class="hero-title">Elevate Your Game</h1>
+        <p class="hero-description">Dominate the court with premium, high-performance basketballs, responsive sneakers, and advanced training gear engineered for athletes who live above the rim.</p>
+        <div class="hero-btns">
+          <a href="shop.html" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#categories" class="btn btn-secondary">Explore Categories</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories Section -->
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Featured Categories</h2>
+        <p class="section-subtitle">Gear up with specialized equipment designed to elevate every aspect of your game.</p>
+      </div>
+
+      <div class="categories-grid scroll-reveal">
+        <!-- Category 1 -->
+        <a href="shop.html?category=Basketballs" class="category-card">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&auto=format&fit=crop&q=80" alt="Premium Basketballs" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Basketballs</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="shop.html?category=Shoes" class="category-card">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80" alt="Basketball Footwear" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Shoes</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="shop.html?category=Jerseys" class="category-card">
+          <img src="https://images.unsplash.com/photo-1515523110800-9415de82373b?w=600&auto=format&fit=crop&q=80" alt="Athletic Jerseys" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Jerseys</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Category 4 -->
+        <a href="shop.html?category=Training Equipment" class="category-card">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Basketball Training Gear" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Training Gear</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Category 5 -->
+        <a href="shop.html?category=Court Accessories" class="category-card">
+          <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?w=600&auto=format&fit=crop&q=80" alt="Basketball Court Accessories" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Court Acc.</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Category 6 -->
+        <a href="shop.html?category=Protective Gear" class="category-card">
+          <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80" alt="Sports Protective Gear" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Protective</h3>
+            <span class="category-card-link">Shop Collection <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers Section -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">The highest rated and most requested gear by players and trainers worldwide.</p>
+      </div>
+
+      <div id="best-sellers-grid" class="products-grid scroll-reveal">
+        <!-- Rendered dynamically by javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Countdown Section -->
+  <section class="section sale-banner">
+    <div class="container">
+      <div class="sale-grid">
+        <div class="sale-info scroll-reveal">
+          <span class="sale-badge">Limited Time Special</span>
+          <h2 class="bold-heading" style="font-size: 3rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 16px;">Kickoff Season Promo</h2>
+          <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; margin-bottom: 24px;">Gear up for the league. Enjoy an exclusive 20% storewide discount on all orders. Plus, get free express shipping on orders over $100.</p>
+          
+          <div class="countdown-wrapper">
+            <div class="countdown-box">
+              <span id="timer-days" class="countdown-number">00</span>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+              <span id="timer-hours" class="countdown-number">00</span>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <span id="timer-mins" class="countdown-number">00</span>
+              <div class="countdown-label">Mins</div>
+            </div>
+            <div class="countdown-box">
+              <span id="timer-secs" class="countdown-number">00</span>
+              <div class="countdown-label">Secs</div>
+            </div>
+          </div>
+
+          <a href="shop.html" class="btn btn-primary">Claim Discount <i class="fa-solid fa-tags"></i></a>
+        </div>
+        <div class="sale-image scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a27?w=600&auto=format&fit=crop&q=80" alt="Basketball Training Court" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Picks Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Top Picks of the Week</h2>
+        <p class="section-subtitle">Carefully curated selections to elevate your workout performance and court game style.</p>
+      </div>
+
+      <div id="top-picks-grid" class="products-grid scroll-reveal">
+        <!-- Rendered dynamically by javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section" style="padding: 70px 0;">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Why Choose HoopZone</h2>
+        <p class="section-subtitle">We're committed to giving every athlete an unfair advantage on the court.</p>
+      </div>
+
+      <div class="stats-grid scroll-reveal" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="stat-card" style="text-align: center;">
+          <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h4 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">Fast Shipping</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Free express delivery on all orders above $100. Tracked same-day dispatch.</p>
+        </div>
+        <div class="stat-card" style="text-align: center;">
+          <div class="stat-icon"><i class="fa-solid fa-lock"></i></div>
+          <h4 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">Secure Payments</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">256-bit SSL encryption protects every transaction. Credit cards & Apple Pay accepted.</p>
+        </div>
+        <div class="stat-card" style="text-align: center;">
+          <div class="stat-icon"><i class="fa-solid fa-medal"></i></div>
+          <h4 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">Premium Quality</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Tested by coaches and athletes. Every item is built to last through seasons of play.</p>
+        </div>
+        <div class="stat-card" style="text-align: center;">
+          <div class="stat-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <h4 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">Easy Returns</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">30-day hassle-free returns and exchanges. No questions asked on unused gear.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Train Like a Pro Section -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-img scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=600&auto=format&fit=crop&q=80" alt="Athlete training agility" loading="lazy">
+        </div>
+        <div class="about-info scroll-reveal">
+          <span class="hero-subtitle">Advanced Performance</span>
+          <h2 class="bold-heading" style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; line-height: 1.2;">Train Like a Pro</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">Great basketball players are not made on court during game time; they are forged in empty gyms through meticulous drills. Our premium training gear provides the feedback, strength increments, and agility conditioning needed to unlock professional-tier habits.</p>
+          <ul style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; font-weight: 600;">
+            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Speed ladder routines for explosive lateral foot cuts</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Weighted training gloves for lightning wrist control</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Performance compression knee braces to secure joint load</li>
+          </ul>
+          <a href="shop.html?category=Training%20Equipment" class="btn btn-primary">Shop Training Gear</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievement Statistics Section -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-basketball"></i></div>
+          <div class="stat-number" data-target="15000">0</div>
+          <div class="stat-title">Products Sold</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-number" data-target="9800">0</div>
+          <div class="stat-title">Happy Customers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="stat-number" data-target="14500">0</div>
+          <div class="stat-title">Orders Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-title">School Partnerships</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">What Players Say</h2>
+        <p class="section-subtitle">Real feedback from high school players, streetball legends, and professional coaches.</p>
+      </div>
+
+      <div class="testimonials-carousel scroll-reveal">
+        <button class="carousel-btn prev" aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next" aria-label="Next Review"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <div class="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"The Elite Leather Basketball feels even better than the official game balls we use in college. Grip is consistent even when palms get sweaty."</p>
+            <span class="testimonial-author">Jordan Miller</span>
+            <span class="testimonial-role">NCAA Division I Guard</span>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="testimonial-quote">"As a coach, I need training gear that handles daily wear. HoopZone's speed ladders and weighted gloves have survived two seasons with no tears."</p>
+            <span class="testimonial-author">Coach Sarah Davis</span>
+            <span class="testimonial-role">Varsity High School Coach</span>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"The responsive padding on the Apex Flight shoes makes landing after vertical rebounds much smoother. Lateral lockdown is absolute gold."</p>
+            <span class="testimonial-author">Derrick Vance</span>
+            <span class="testimonial-role">Streetball Tournament Organizer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Basketball Tips Blog Preview Section -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Basketball Tips Blog</h2>
+        <p class="section-subtitle">Insights and training guides curated by expert sports coaches and trainers.</p>
+      </div>
+
+      <div class="blog-grid scroll-reveal">
+        <!-- Post 1 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&auto=format&fit=crop&q=80" alt="Basketball Shooting Form" loading="lazy">
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">June 18, 2026 • Training Tips</span>
+            <h3 class="blog-title"><a href="#">Perfecting Your Jump Shot Arc</a></h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95rem;">Understand the mathematics behind shot entry angles and how simple releases can improve consistency from the three-point line.</p>
+            <a href="#" class="blog-link">Read Guide <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=600&auto=format&fit=crop&q=80" alt="Speed agility conditioning" loading="lazy">
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">June 12, 2026 • Conditioning</span>
+            <h3 class="blog-title"><a href="#">5 Drills for Explosive Lateral Crossovers</a></h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95rem;">Unlock ankle stability and hip acceleration to create space during isolation court cuts against defensive anchors.</p>
+            <a href="#" class="blog-link">Read Guide <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80" alt="Sports joint recovery" loading="lazy">
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">June 04, 2026 • Recovery</span>
+            <h3 class="blog-title"><a href="#">Managing Knee Strain in High Impact Sports</a></h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95rem;">Proper warm-ups, recovery stretches, compression sleeve allocations, and post-game cooling processes to avoid chronic patella issues.</p>
+            <a href="#" class="blog-link">Read Guide <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Community Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Joined the Zone</h2>
+        <p class="section-subtitle">Tag <span class="text-primary-color" style="font-weight: 700;">#HoopZoneGear</span> on social media to get featured in our professional community board.</p>
+      </div>
+
+      <div class="instagram-grid scroll-reveal">
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a27?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1515523110800-9415de82373b?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=300&auto=format&fit=crop&q=80" alt="Community Post" loading="lazy">
+          <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Section -->
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-container scroll-reveal">
+        <h2 class="bold-heading" style="font-size: 2.2rem; text-transform: uppercase; margin-bottom: 12px;">Get 10% Off Your First Order</h2>
+        <p style="color: var(--text-secondary);">Subscribe to our newsletter to receive training guides, tournament updates, and early access code releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully!', 'success'); this.reset();">
+          <input type="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-primary">Join Zone</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+        </a>
+        <p>Premium sports brand dedicated to providing professional-grade basketball equipment, apparel, footwear, and coaching accessories to players worldwide.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop Gear</a></li>
+          <li><a href="about.html">About Brand</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html?category=Basketballs">Basketballs</a></li>
+          <li><a href="shop.html?category=Shoes">Shoes / Sneakers</a></li>
+          <li><a href="shop.html?category=Jerseys">Team Jerseys</a></li>
+          <li><a href="shop.html?category=Training%20Equipment">Training Gear</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-links" style="color: var(--text-secondary);">
+          <li style="display: flex; gap: 10px; align-items: flex-start;">
+            <i class="fa-solid fa-location-dot" style="color: var(--primary); margin-top: 5px;"></i>
+            <span>88 Court Street, Madison Square Garden Area, New York, NY 10001</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-phone" style="color: var(--primary);"></i>
+            <span>+1 (800) 555-HOOP</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-envelope" style="color: var(--primary);"></i>
+            <span>support@hoopzone.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HoopZone Sports Group. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping & Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Inline Home Page specific dynamic cards rendering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHomeGrids();
+    });
+
+    function renderHomeGrids() {
+      const bestSellersGrid = document.getElementById('best-sellers-grid');
+      const topPicksGrid = document.getElementById('top-picks-grid');
+
+      if (bestSellersGrid) {
+        const bestSellers = getBestSellers(4);
+        renderHomeCards(bestSellersGrid, bestSellers);
+      }
+
+      if (topPicksGrid) {
+        const topPicks = getTopPicks(4);
+        renderHomeCards(topPicksGrid, topPicks);
+      }
+    }
+
+    function renderHomeCards(gridEl, productList) {
+      gridEl.innerHTML = '';
+      productList.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        
+        const badgesHtml = [];
+        if (product.isBestSeller) {
+          badgesHtml.push(`<span class="product-badge">Best Seller</span>`);
+        } else if (product.isTopPick) {
+          badgesHtml.push(`<span class="product-badge" style="background-color: var(--text-primary); color: var(--bg-primary);">Top Pick</span>`);
+        }
+
+        card.innerHTML = `
+          <div class="product-badge-container">
+            ${badgesHtml.join('')}
+          </div>
+          <button class="wishlist-btn" data-id="${product.id}">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-img-wrapper">
+            <a href="product.html?id=${product.id}">
+              <img src="${product.image}" alt="${product.name}" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">${product.category}</span>
+            <a href="product.html?id=${product.id}" class="product-title-link">${product.name}</a>
+            <div class="product-rating">
+              <div class="stars">
+                ${generateStarsHtml(product.rating)}
+              </div>
+              <span class="reviews-count">(${product.reviewsCount})</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$${product.price.toFixed(2)}</span>
+              <button class="add-to-cart-btn" data-id="${product.id}">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        gridEl.appendChild(card);
+      });
+
+      // Bind dynamic actions
+      gridEl.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.target.closest('.add-to-cart-btn').dataset.id;
+          addToCart(id, 1, true);
+        });
+      });
+
+      // Bind wishlist buttons state
+      if (typeof initWishlistButtons === 'function') {
+        initWishlistButtons();
+      }
+    }
+  </script>
+</body>
+</html>

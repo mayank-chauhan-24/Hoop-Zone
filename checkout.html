@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Checkout | HoopZone</title>
+  <meta name="description" content="Provide shipping information, payment options, and finalize your order securely. Secure SSL connection.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🔥 Season Kickoff Sale: Use Code <span style="text-decoration: underline; font-weight: 800;">HOOP20</span> for 20% off all gear! 🔥
+  </div>
+
+  <!-- Header Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="nav-icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="shop.html" class="nav-icon-btn" aria-label="Search Shop">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="shop.html?wishlist=true" class="nav-icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge wishlist-badge">0</span>
+        </a>
+        <a href="cart.html" class="nav-icon-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-badge">0</span>
+        </a>
+        <div class="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title Banner -->
+  <section class="section" style="background-color: var(--bg-secondary); padding: 50px 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center;">
+      <h1 class="bold-heading" style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 8px;">Secure Checkout</h1>
+      <p style="color: var(--text-secondary);"><i class="fa-solid fa-shield-halved"></i> 256-Bit Encrypted Secure Connection</p>
+    </div>
+  </section>
+
+  <!-- Checkout Grid Layout -->
+  <section class="section">
+    <div class="container">
+      <div class="checkout-layout">
+        
+        <!-- Forms Area -->
+        <div class="checkout-main-forms">
+          
+          <!-- Step indicator header -->
+          <div class="checkout-steps scroll-reveal active">
+            <div class="checkout-step active" id="step-tab-shipping">
+              <span class="step-num">1</span> Shipping Details
+            </div>
+            <div class="checkout-step" id="step-tab-payment">
+              <span class="step-num">2</span> Payment Method
+            </div>
+          </div>
+
+          <!-- Checkout Form -->
+          <form id="checkout-main-form" class="scroll-reveal active">
+            
+            <!-- Shipping Card -->
+            <div class="checkout-card" id="shipping-section">
+              <h3>Shipping Information</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                  <label for="ship-first-name" class="form-label">First Name *</label>
+                  <input type="text" id="ship-first-name" class="form-control" placeholder="Jordan" required>
+                </div>
+                <div class="form-group">
+                  <label for="ship-last-name" class="form-label">Last Name *</label>
+                  <input type="text" id="ship-last-name" class="form-control" placeholder="Miller" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                  <label for="ship-email" class="form-label">Email Address *</label>
+                  <input type="email" id="ship-email" class="form-control" placeholder="jordan@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="ship-phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="ship-phone" class="form-control" placeholder="(555) 000-0000" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="ship-address" class="form-label">Street Address *</label>
+                <input type="text" id="ship-address" class="form-control" placeholder="88 Court Street, Apt 3B" required>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                  <label for="ship-city" class="form-label">City *</label>
+                  <input type="text" id="ship-city" class="form-control" placeholder="New York" required>
+                </div>
+                <div class="form-group">
+                  <label for="ship-state" class="form-label">State *</label>
+                  <input type="text" id="ship-state" class="form-control" placeholder="NY" required>
+                </div>
+                <div class="form-group">
+                  <label for="ship-zip" class="form-label">Zip Code *</label>
+                  <input type="text" id="ship-zip" class="form-control" placeholder="10001" required>
+                </div>
+              </div>
+
+              <div style="text-align: right; margin-top: 10px;">
+                <button type="button" class="btn btn-primary" onclick="proceedToPaymentTab()">Continue to Payment <i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Payment Card (Hidden initially or toggleable) -->
+            <div class="checkout-card" id="payment-section" style="display: none;">
+              <h3>Payment Options</h3>
+              
+              <div class="payment-methods" style="margin-bottom: 30px;">
+                <div class="payment-method-card active" data-type="credit-card" onclick="selectPaymentMethod(this)">
+                  <input type="radio" name="payment_type" checked class="payment-radio" aria-label="Pay with Credit Card">
+                  <i class="fa-solid fa-credit-card"></i>
+                  <div>
+                    <strong>Credit / Debit Card</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary)">Visa, Mastercard, Discover, Amex</div>
+                  </div>
+                </div>
+
+                <div class="payment-method-card" data-type="express" onclick="selectPaymentMethod(this)">
+                  <input type="radio" name="payment_type" class="payment-radio" aria-label="Pay with Digital Wallet">
+                  <i class="fa-brands fa-apple-pay"></i>
+                  <div>
+                    <strong>Express Digital Wallet</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary)">Apple Pay, Google Pay, PayPal</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credit Card Fields -->
+              <div id="credit-card-fields-group">
+                <div class="form-group">
+                  <label for="card-holder" class="form-label">Cardholder Name *</label>
+                  <input type="text" id="card-holder" class="form-control" placeholder="Jordan Miller">
+                </div>
+
+                <div class="form-group">
+                  <label for="card-number" class="form-label">Card Number *</label>
+                  <input type="text" id="card-number" class="form-control" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                  <div class="form-group">
+                    <label for="card-expiry" class="form-label">Expiration Date *</label>
+                    <input type="text" id="card-expiry" class="form-control" placeholder="MM / YY" maxlength="7">
+                  </div>
+                  <div class="form-group">
+                    <label for="card-cvv" class="form-label">CVV Code *</label>
+                    <input type="text" id="card-cvv" class="form-control" placeholder="000" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Digital wallet instructions Mockup -->
+              <div id="digital-wallet-instructions" style="display: none; text-align: center; padding: 20px; background-color: var(--bg-primary); border-radius: var(--border-radius-sm); border: 1px dashed var(--border-color); margin-bottom: 24px;">
+                <i class="fa-brands fa-apple-pay" style="font-size: 3rem; margin-bottom: 8px;"></i>
+                <p style="font-size: 0.95rem; color: var(--text-secondary)">Apple Pay and Google Pay options will slide open when placing the order.</p>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <button type="button" class="btn btn-secondary" onclick="backToShippingTab()"><i class="fa-solid fa-chevron-left"></i> Back to Shipping</button>
+                <button type="submit" class="btn btn-primary">Place Order <i class="fa-solid fa-circle-check"></i></button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Summary Column -->
+        <div class="checkout-summary-col">
+          <div class="cart-summary-card scroll-reveal active">
+            <h3 class="cart-summary-title">Review Order</h3>
+            
+            <!-- Items list -->
+            <div class="checkout-summary-list" style="margin-bottom: 24px;">
+              <!-- Rendered dynamically by cart.js -->
+            </div>
+
+            <div class="summary-row" style="border-top: 1px dotted var(--border-color); padding-top: 16px;">
+              <span>Subtotal</span>
+              <span class="checkout-subtotal">$00.00</span>
+            </div>
+            
+            <div class="summary-row checkout-discount-row" style="display: none; color: var(--success); font-weight: 600;">
+              <span>Promo Discount (20%)</span>
+              <span class="checkout-discount">-$0.00</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span class="checkout-shipping">$00.00</span>
+            </div>
+
+            <div class="summary-row total" style="margin-bottom: 0;">
+              <span>Grand Total</span>
+              <span class="checkout-total">$00.00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Confirmation Modal -->
+  <div class="order-modal-overlay" id="order-success-modal">
+    <div class="order-modal">
+      <div class="order-success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2>Order Confirmed!</h2>
+      <p>Thank you for shopping at HoopZone. Your order has been received and is being processed by our court distribution center.</p>
+      
+      <div style="background-color: var(--bg-primary); padding: 16px; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color); margin-bottom: 24px; font-weight: 700;">
+        Order Number: <span id="modal-order-number" class="text-primary-color">#HZ-49712</span>
+      </div>
+
+      <button class="btn btn-primary" onclick="closeOrderModal()" style="width: 100%;">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+        </a>
+        <p>Premium sports brand dedicated to providing professional-grade basketball equipment, apparel, footwear, and coaching accessories to players worldwide.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop Gear</a></li>
+          <li><a href="about.html">About Brand</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html?category=Basketballs">Basketballs</a></li>
+          <li><a href="shop.html?category=Shoes">Shoes / Sneakers</a></li>
+          <li><a href="shop.html?category=Jerseys">Team Jerseys</a></li>
+          <li><a href="shop.html?category=Training%20Equipment">Training Gear</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-links" style="color: var(--text-secondary);">
+          <li style="display: flex; gap: 10px; align-items: flex-start;">
+            <i class="fa-solid fa-location-dot" style="color: var(--primary); margin-top: 5px;"></i>
+            <span>88 Court Street, Madison Square Garden Area, New York, NY 10001</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-phone" style="color: var(--primary);"></i>
+            <span>+1 (800) 555-HOOP</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-envelope" style="color: var(--primary);"></i>
+            <span>support@hoopzone.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HoopZone Sports Group. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping & Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page specific script for progressive steps and submission -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof renderCheckoutSummaryUI === 'function') {
+        renderCheckoutSummaryUI();
+      }
+
+      // Check if cart is empty, redirect if so
+      const items = getCartItems();
+      if (items.length === 0) {
+        showToast("Your shopping cart is empty.", "error");
+        setTimeout(() => {
+          window.location.href = "shop.html";
+        }, 1500);
+      }
+
+      // Input formatter for card inputs
+      const ccNum = document.getElementById('card-number');
+      if (ccNum) {
+        ccNum.addEventListener('input', (e) => {
+          let val = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+          let matches = val.match(/\d{4,16}/g);
+          let match = matches && matches[0] || '';
+          let parts = [];
+          for (let i=0, len=match.length; i<len; i+=4) {
+            parts.push(match.substring(i, i+4));
+          }
+          if (parts.length > 0) {
+            e.target.value = parts.join(' ');
+          } else {
+            e.target.value = val;
+          }
+        });
+      }
+
+      const ccExpiry = document.getElementById('card-expiry');
+      if (ccExpiry) {
+        ccExpiry.addEventListener('input', (e) => {
+          let val = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+          if (val.length >= 2) {
+            e.target.value = val.substring(0, 2) + ' / ' + val.substring(2, 4);
+          } else {
+            e.target.value = val;
+          }
+        });
+      }
+    });
+
+    function proceedToPaymentTab() {
+      // Basic validations for shipping step fields
+      const firstName = document.getElementById('ship-first-name').value.trim();
+      const lastName = document.getElementById('ship-last-name').value.trim();
+      const email = document.getElementById('ship-email').value.trim();
+      const phone = document.getElementById('ship-phone').value.trim();
+      const address = document.getElementById('ship-address').value.trim();
+      const city = document.getElementById('ship-city').value.trim();
+      const state = document.getElementById('ship-state').value.trim();
+      const zip = document.getElementById('ship-zip').value.trim();
+
+      if (!firstName || !lastName || !email || !phone || !address || !city || !state || !zip) {
+        showToast("Please fill in all shipping fields.", "error");
+        return;
+      }
+
+      // Transition Tabs UI
+      document.getElementById('step-tab-shipping').className = 'checkout-step completed';
+      document.getElementById('step-tab-payment').className = 'checkout-step active';
+
+      document.getElementById('shipping-section').style.display = 'none';
+      document.getElementById('payment-section').style.display = 'block';
+    }
+
+    function backToShippingTab() {
+      document.getElementById('step-tab-shipping').className = 'checkout-step active';
+      document.getElementById('step-tab-payment').className = 'checkout-step';
+
+      document.getElementById('shipping-section').style.display = 'block';
+      document.getElementById('payment-section').style.display = 'none';
+    }
+
+    function selectPaymentMethod(element) {
+      document.querySelectorAll('.payment-method-card').forEach(card => card.classList.remove('active'));
+      element.classList.add('active');
+      
+      const radio = element.querySelector('.payment-radio');
+      radio.checked = true;
+
+      const type = element.dataset.type;
+      const ccFields = document.getElementById('credit-card-fields-group');
+      const expressInst = document.getElementById('digital-wallet-instructions');
+
+      if (type === 'credit-card') {
+        ccFields.style.display = 'block';
+        expressInst.style.display = 'none';
+        
+        document.getElementById('card-holder').required = true;
+        document.getElementById('card-number').required = true;
+        document.getElementById('card-expiry').required = true;
+        document.getElementById('card-cvv').required = true;
+      } else {
+        ccFields.style.display = 'none';
+        expressInst.style.display = 'block';
+
+        document.getElementById('card-holder').required = false;
+        document.getElementById('card-number').required = false;
+        document.getElementById('card-expiry').required = false;
+        document.getElementById('card-cvv').required = false;
+      }
+    }
+
+    // Handle Form Submit
+    document.getElementById('checkout-main-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Additional Credit Card Checks if credit card is checked
+      const activeMethod = document.querySelector('.payment-method-card.active').dataset.type;
+      if (activeMethod === 'credit-card') {
+        const num = document.getElementById('card-number').value.replace(/\s+/g, '');
+        const expiry = document.getElementById('card-expiry').value;
+        const cvv = document.getElementById('card-cvv').value;
+
+        if (num.length < 15) {
+          showToast("Please provide a valid card number.", "error");
+          return;
+        }
+        if (cvv.length < 3) {
+          showToast("Please provide a valid CVV code.", "error");
+          return;
+        }
+      }
+
+      // Collect Data for backend
+      const customerInfo = {
+        name: document.getElementById('shipping-fname').value + ' ' + document.getElementById('shipping-lname').value,
+        email: document.getElementById('shipping-email').value,
+        phone: document.getElementById('shipping-phone').value,
+        address: document.getElementById('shipping-address').value,
+        city: document.getElementById('shipping-city').value,
+        zipCode: document.getElementById('shipping-zip').value
+      };
+      
+      const orderData = {
+        customerInfo,
+        cartItems: getCartItems(),
+        totalAmount: getOrderTotal()
+      };
+
+      try {
+        const submitBtn = document.querySelector('.place-order-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Processing...';
+        submitBtn.disabled = true;
+
+        const response = await fetch('http://localhost:5000/api/orders', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(orderData)
+        });
+
+        if (!response.ok) throw new Error('Order submission failed');
+
+        const result = await response.json();
+        
+        // Show Success Modal
+        document.getElementById('modal-order-number').textContent = result.orderId || 'HZ-' + Math.floor(10000 + Math.random() * 90000);
+        document.getElementById('order-success-modal').classList.add('active');
+        
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      } catch (error) {
+        showToast("Error processing your order. Please try again.", "error");
+        console.error("Order error:", error);
+        
+        const submitBtn = document.querySelector('.place-order-btn');
+        submitBtn.textContent = 'Place Order Securely';
+        submitBtn.disabled = false;
+      }
+    });
+
+    function closeOrderModal() {
+      // Clear Cart Data
+      clearCart();
+      
+      // Close Modal and Redirect
+      document.getElementById('order-success-modal').classList.remove('active');
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

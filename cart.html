@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Bag | HoopZone</title>
+  <meta name="description" content="View items in your HoopZone shopping bag, apply promotional discounts, adjust purchase quantities, and proceed to secure checkout.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🔥 Season Kickoff Sale: Use Code <span style="text-decoration: underline; font-weight: 800;">HOOP20</span> for 20% off all gear! 🔥
+  </div>
+
+  <!-- Header Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="nav-icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="shop.html" class="nav-icon-btn" aria-label="Search Shop">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="shop.html?wishlist=true" class="nav-icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge wishlist-badge">0</span>
+        </a>
+        <a href="cart.html" class="nav-icon-btn active" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-badge">0</span>
+        </a>
+        <div class="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="section" style="background-color: var(--bg-secondary); padding: 50px 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center;">
+      <h1 class="bold-heading" style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 8px;">Shopping Cart</h1>
+      <p style="color: var(--text-secondary);">Review your selected premium court gear before checkout</p>
+    </div>
+  </section>
+
+  <!-- Cart Content Area -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Empty Cart State -->
+      <div class="cart-empty-state scroll-reveal active" style="display: none; text-align: center; padding: 80px 20px;">
+        <i class="fa-solid fa-bag-shopping" style="font-size: 4rem; color: var(--border-color); margin-bottom: 24px;"></i>
+        <h2 style="text-transform: uppercase; margin-bottom: 12px;">Your Cart is Empty</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">Looks like you haven't added any professional gear to your bag yet.</p>
+        <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+      </div>
+
+      <!-- Filled Cart Layout -->
+      <div class="cart-filled-content cart-layout scroll-reveal active" style="display: none;">
+        
+        <!-- Cart Items Table List -->
+        <div class="cart-table-wrapper">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="cart-items-body">
+              <!-- Rendered dynamically by cart.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Cart Summary Card -->
+        <div class="cart-summary-col">
+          <div class="cart-summary-card">
+            <h3 class="cart-summary-title">Order Summary</h3>
+            
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span class="summary-subtotal">$00.00</span>
+            </div>
+            
+            <div class="summary-row summary-discount-row" style="display: none; color: var(--success); font-weight: 600;">
+              <span>Promo Discount (20%)</span>
+              <span class="summary-discount">-$0.00</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Estimated Shipping</span>
+              <span class="summary-shipping">$00.00</span>
+            </div>
+
+            <div class="coupon-box">
+              <input type="text" class="coupon-code-input" placeholder="Promo Code" aria-label="Discount Coupon Code">
+              <button class="btn btn-dark apply-coupon-btn">Apply</button>
+            </div>
+            
+            <div class="discount-message">Promo code applied successfully!</div>
+
+            <div class="summary-row total">
+              <span>Estimated Total</span>
+              <span class="summary-total">$00.00</span>
+            </div>
+
+            <a href="checkout.html" class="btn btn-primary" style="width: 100%;">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></a>
+            
+            <div style="margin-top: 20px; text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+              <i class="fa-solid fa-lock" style="color: var(--success);"></i> Secure 256-Bit SSL Checkout Guaranteed
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-container scroll-reveal">
+        <h2 class="bold-heading" style="font-size: 2.2rem; text-transform: uppercase; margin-bottom: 12px;">Get 10% Off Your First Order</h2>
+        <p style="color: var(--text-secondary);">Subscribe to our newsletter to receive training guides, tournament updates, and early access code releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully!', 'success'); this.reset();">
+          <input type="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="btn btn-primary">Join Zone</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <i class="fa-solid fa-basketball"></i> Hoop<span>Zone</span>
+        </a>
+        <p>Premium sports brand dedicated to providing professional-grade basketball equipment, apparel, footwear, and coaching accessories to players worldwide.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop Gear</a></li>
+          <li><a href="about.html">About Brand</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html?category=Basketballs">Basketballs</a></li>
+          <li><a href="shop.html?category=Shoes">Shoes / Sneakers</a></li>
+          <li><a href="shop.html?category=Jerseys">Team Jerseys</a></li>
+          <li><a href="shop.html?category=Training%20Equipment">Training Gear</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-links" style="color: var(--text-secondary);">
+          <li style="display: flex; gap: 10px; align-items: flex-start;">
+            <i class="fa-solid fa-location-dot" style="color: var(--primary); margin-top: 5px;"></i>
+            <span>88 Court Street, Madison Square Garden Area, New York, NY 10001</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-phone" style="color: var(--primary);"></i>
+            <span>+1 (800) 555-HOOP</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center;">
+            <i class="fa-solid fa-envelope" style="color: var(--primary);"></i>
+            <span>support@hoopzone.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 HoopZone Sports Group. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping & Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Auto-Render call for Cart UI -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof renderCartPageUI === 'function') {
+        renderCartPageUI();
+      }
+    });
+  </script>
+</body>
+</html>
